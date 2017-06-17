@@ -124,7 +124,7 @@ let read_until (term : char) (input : BatIO.input) : string =
   in
   loop ()
 
-(* A functions that wraps some computation [f input filename], providing
+(* A function that wraps some computation [f input filename], providing
    resource management (cleanly closes the input at the end, if needed).
 *)
 let with_file (f : BatIO.input -> string -> 'a) (filename : string) : 'a =
