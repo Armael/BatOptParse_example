@@ -10,9 +10,9 @@ module P = BatOptParse
    integers with multiplier suffixes, we could extend the current implementation
    to support the multiplier as follows:
 
-   let int_with_multiplier_option () =
-     P.Opt.callback_option
-       "NUM"
+   let int_with_multiplier_option ?default () =
+     P.Opt.value_option
+       "NUM" default
        parse
        (fun exn s -> "Invalid argument: " ^ s)
 
